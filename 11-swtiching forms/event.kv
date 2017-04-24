@@ -1,0 +1,21 @@
+#: import main main
+rootWidget:
+    Form1
+
+<Form1>:
+    BoxLayout:
+        Label:
+            text: "Form1"
+        Button:
+            text:"next"
+            on_press: root.goto_form2()
+
+
+
+<Form2>:
+    BoxLayout:
+        Label:
+            text:"Form2"
+        Button:
+            text: "back"
+            on_press: root.goto_form1()
