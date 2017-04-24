@@ -1,0 +1,28 @@
+#: import main main
+rootWidget:
+    EventForm
+
+<EventForm>:
+    BoxLayout:
+        Label:
+            text:"event"
+        Button:
+            text:"send text"
+            on_press: main.ChangeForm().Print(self.text)
+        Button:
+            text:"clear widgets"
+            on_press:app.root.clear_widget()
+        Button:
+            text: "change widgets"
+            on_press: app.root.new_widget()
+        Button:
+            text: "dynamic widget"
+            on_press: app.root.dynamic_widget()
+
+
+<ChangeForm>:
+    BoxLayout:
+        Label:
+            text:"new window"
+        Button:
+            text: "dynamic widget"
