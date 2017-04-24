@@ -1,0 +1,19 @@
+Mywidget:
+
+<Mywidget>:
+    label_text:label_text
+    my_button: my_button
+    AnchorLayout:
+        anchor_x: "left"
+        anchor_y: "bottom"
+
+        BoxLayout:
+            size_hint_y: None
+            height: "50px"
+            Button:
+                id: my_button
+                text:"click for show"
+                on_press: root.Print()
+            Label:
+                id: label_text
+                text:"hi"
