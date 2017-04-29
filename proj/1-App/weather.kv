@@ -1,0 +1,22 @@
+AddLocationForm:
+
+<AddLocationForm@BoxLayout>:
+    orientation:"vertical"
+
+    BoxLayout:
+        size_hint_y: None
+        height: "40dp"
+
+        TextInput:
+            size_hint_x:50
+
+        Button:
+            text:"search"
+            size_hint_x: 25
+
+        Button:
+            size_hint_x:25
+            text:"current location"
+
+    ListView:
+        item_strings:["dsa", "pd"]
