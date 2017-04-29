@@ -3,6 +3,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import ObjectProperty
 from kivy.network.urlrequest import UrlRequest
 from kivy.uix.listview import ListItemButton
+from kivy.factory import Factory
 
 import json
 
@@ -11,9 +12,13 @@ class WeatherApp(App):
 
 class weatherRoot(BoxLayout):
     def show_current_weather(self, location):
-        from kivy.uix.label import Label
         self.clear_widgets()
-        self.add_widget(Label(text=location))
+        current_weather=Factory.CurrentWeather()
+        self.add_widget(current_weather)
+
+    def show_add_location_form(self):
+        self.clear_widgets()
+        self.add_widget(AddLocationForm())
 
 class AddLocationForm(BoxLayout):
     search_input=ObjectProperty()
