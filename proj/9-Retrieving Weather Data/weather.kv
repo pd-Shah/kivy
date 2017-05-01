@@ -60,7 +60,7 @@ WeatherRoot:
             text: "High: {}".format(root.temp_max)
     BoxLayout:
         orientation: "horizontal"
-        size_hint_y: None 
+        size_hint_y: None
         height: "40dp"
         Button:
             text: "Add Location"
@@ -74,4 +74,3 @@ WeatherRoot:
     height: "40dp"
     size_hint_y: None
     on_press: app.root.show_current_weather(self.location)
-
