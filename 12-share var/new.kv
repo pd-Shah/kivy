@@ -1,0 +1,45 @@
+MainMenu
+
+<MainMenu>:
+    orientation: 'vertical'
+    Label:
+        text: "Welcome to your Flash Card App!"
+        size_hint_y: 5
+    BoxLayout:
+        size_hint_y: 1
+        orientation: "horizontal"
+        Button:
+            text: "Enter sentences"
+            on_press: root.enter_sentences_button()
+        Button:
+            text: "Review"
+            on_press: root.review_button()
+
+
+<EnterSentences>:
+    search_box: enter_sentence
+    orientation: "vertical"
+    Label:
+        text: "Enter your sentences here:"
+        size_hint_y: 4
+    TextInput:
+        id: enter_sentence
+        on_text: app.sentence1=self.text
+    TextInput:
+        on_text: app.sentence2=self.text
+    TextInput:
+        on_text: app.sentence3=self.text
+    BoxLayout:
+        orientation: 'horizontal'
+        Button:
+            text: 'Main Menu'
+            on_press: root.main_menu()
+        Label:
+            text: ''
+
+
+<Review>:
+    orientation: 'vertical'
+    TextInput:
+        size_hint_y: 1
+        text: app.sentence1 + "\n" + app.sentence2 + "\n" + app.sentence3
