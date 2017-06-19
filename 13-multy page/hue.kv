@@ -1,0 +1,29 @@
+<Test>:
+  PageLayout:
+    BoxLayout:
+      canvas.before:
+        Color:
+          rgba: 0, 1, 0, 1
+        Rectangle:
+          # self here refers to the widget i.e BoxLayout
+          pos: self.pos
+          size: self.size
+      Label:
+        text:"page1"
+
+    BoxLayout:
+      canvas.before:
+        Color:
+          rgba: 1, 0, 0, 1
+        Rectangle:
+          # self here refers to the widget i.e BoxLayout
+          pos: self.pos
+          size: self.size
+    BoxLayout:
+      canvas.before:
+        Color:
+          rgba: 0, 0, 1, 1
+        Rectangle:
+          # self here refers to the widget i.e BoxLayout
+          pos: self.pos
+          size: self.size
